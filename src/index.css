@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "flowbite/plugin";
+@layer components {
+    .custom-dots li button {
+        @apply relative p-2 -top-8
+    }
+    .custom-dots li button:before {
+        @apply text-main text-base top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+
+      }
+      .custom-dots li.slick-active button:before {
+        @apply text-main 
+      }
+    .custom-dots-offers li button {
+        @apply relative p-2
+    }
+    .custom-dots-offers li button:before {
+        @apply text-main text-base top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+
+      }
+      .custom-dots-offers li.slick-active button:before {
+        @apply text-main 
+      }
+ 
+      
+}
+
+.test {
+  background-image: url(/src/assets/images/footerbg.png);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  /* z-index: 1; */
+}

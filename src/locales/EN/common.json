@@ -1,0 +1,24 @@
+{
+  "navbar" : {
+    "Home" : "Home",
+    "About" : "About Us",
+    "Specializations" : "Specializations",
+    "Contact" : "Contact Us"
+  
+  },
+  "slider1" : {
+    "title" : "skip the travel! take online",
+    "doctor" : "doctor",
+    "consultation" : "consultation",
+    "description" : "connect instantly with a 24x7 specialist or choose to video visit a particular doctor",
+    "button" : "consult now"
+  },
+  "whoWeAre" : {
+    "title" : "Who We Are",
+    "description" : "Welcome to our medical building, home to a diverse range of specialized doctors dedicated to providing the highest standard of care. With a collaborative approach, we ensure that you receive comprehensive medical services under one roof, making your healthcare journey seamless and efficient."
+  }, 
+  "Specialization": {
+    "title" :"Find By Specialization" ,
+    "button" :"View All"
+    }
+}
