@@ -1,7 +1,8 @@
 import { TranslateContext } from '@/context/TranslateContext'
 import React, { useContext, useEffect } from 'react'
 
-export default function useExtractData(data) {
+export default function useExtractData(data ={}) {
+// console.log(data);
 
  const {lang}=   useContext(TranslateContext)
 

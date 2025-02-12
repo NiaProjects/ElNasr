@@ -3,8 +3,11 @@ import Doctor from './Doctor'
 import Slider from 'react-slick';
 import useApi from '@/Hooks/useApi';
 import { urlDoctors } from '@/api/api';
+import { useTranslation } from 'react-i18next';
+import CardSkeleton from '@/Components/skeletons/CardSkeleton';
 
 export default function TopDoctors() {
+  const {t} = useTranslation("global")
     const settings = {
         dots: true,
         infinite: true,
@@ -33,11 +36,11 @@ export default function TopDoctors() {
     };
 
     const {isLoading , isError , data} = useApi({url : urlDoctors , queryKey : "doctors"} )
-    if(isLoading) return <p>Loading...</p>
+    if(isLoading) return <CardSkeleton/>
     if(isError) return <p>Error</p>
   return (
     <section className='py-14 bg-sec' >
-        <h3 className='text-5xl font-bold text-center text-sec my-4'>Top Doctors</h3>
+        <h3 className='text-5xl font-bold text-center text-sec my-4'>{t("TopDoctors.title")}</h3>
           <div className="slider-container custom-dots">
       <Slider {...settings}>
 

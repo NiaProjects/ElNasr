@@ -23,9 +23,14 @@
       .custom-dots-offers li.slick-active button:before {
         @apply text-main 
       }
+      .active {
+        @apply text-white bg-main px-4 py-2 rounded-2xl
+      }
  
       
 }
+
+
 
 .test {
   background-image: url(/src/assets/images/footerbg.png);

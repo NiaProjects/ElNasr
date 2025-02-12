@@ -11,12 +11,21 @@ import EN_lang from "./locales/EN/common.json"
 import AR_lang from "./locales/AR/common.json"
 import { I18nextProvider } from 'react-i18next'
 import TranslateContextProvider from './context/TranslateContext'
+import Doctors from './pages/Doctors/Doctors'
+import SpecializationPage from './pages/Specialization/SpecializationPage'
+import DoctorDetails from './pages/DoctorDetails/DoctorDetails'
+import NotFound from './pages/NotFound/NotFound'
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />, children: [
-      {index : true , element : <Home/>},
+      { path:"/" , index : true , element : <Home/>},
       {path: "contact" , element: <ContactUs />},
+      // {path: "about" , element: <Doctors/>},
+      {path: "specializations" , element: <SpecializationPage/>},
+      {path: "Specialization/:specialistId" , element: <Doctors/>},
+      {path: "doctor/:doctorId" , element: <DoctorDetails/>},
+      {path: "*" , element: <NotFound/>},
     ]}
 ])
 const queryClient = new QueryClient()

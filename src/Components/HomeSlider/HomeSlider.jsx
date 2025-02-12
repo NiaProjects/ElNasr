@@ -3,6 +3,9 @@ import React from 'react'
 import Slider from 'react-slick';
 import Slide from '../Slide/Slide';
 import HowWeAre from './HowWeAre';
+import Slide2 from '../Slide/Slide2';
+import img from "../../assets/images/slide3.jpg"
+import Slide3 from '../Slide/Slide3';
 export default function HomeSlider() {
     const settings = {
         dots: true,
@@ -19,12 +22,12 @@ export default function HomeSlider() {
 
 <div className='bg-sec'>
 <div className="container">
-<div className="slider-container  custom-dots h-[80vh]  ">
+<div className="slider-container  custom-dots min-h-[80vh] md:h-[80vh]  ">
             <div className='bg-sec '>
             <Slider {...settings}>
                         <Slide/>
-                        <Slide/>
-                        <Slide/>
+                        <Slide2/>
+                        <Slide3/>
                     </Slider>
             </div>
 <HowWeAre/>

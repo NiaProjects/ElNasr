@@ -3,6 +3,8 @@ import logo from '../../assets/images/logoelnasr.png'
 import { Link, NavLink } from 'react-router-dom'
 import { TranslateContext } from '@/context/TranslateContext'
 import { useTranslation } from 'react-i18next'
+import UsFlag from '../Flags/UsFlag'
+import EgFlag from '../Flags/EgFlag'
 
 export default function Navbar() {
   const {lang , handelChangeLang} = useContext(TranslateContext)
@@ -18,9 +20,9 @@ export default function Navbar() {
   <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
   <button
   onClick={handelChangeLang}
-  className='border-2 border-main shadow-md shadow-teal-300 hover:scale-105 focus:shadow-none transition-all duration-200 px-3 py-1 rounded-md bg-gray-100 text-teal-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-teal-300 dark:hover:bg-gray-700'
+  className='border-2  border-main shadow-md shadow-teal-300 hover:scale-105 focus:shadow-none transition-all duration-200 px-3 py-1 rounded-md bg-main  text-white font-semibold flex items-center gap-2'
 >
-  <i className="fa-solid fa-earth-americas"></i> {lang == "ar" ? "English" : "عربي"}
+ {lang == "ar" ? <> <UsFlag/> English </>  : <> <EgFlag/> عربي</>}
 </button>
       <button data-collapse-toggle="navbar-language" type="button" className="inline-flex bg-main text-white items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-sky-600  focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-language" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
@@ -32,16 +34,16 @@ export default function Navbar() {
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
     <ul className="flex flex-col  font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg0  md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li className='mx-4'>
-        <NavLink to="/" className="block py-2 px-3  text-white bg-main rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">{t("navbar.Home")}</NavLink>
+        <NavLink to="/" className="block py-2 px-3    g-main    " aria-current="page">{t("navbar.Home")}</NavLink>
       </li>
       <li className='mx-4'>
-        <NavLink to="/about" className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.About")}</NavLink>
+        <NavLink to="/about" className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.About")}</NavLink>
       </li>
       <li className='mx-4'>
-        <NavLink  to="/specializations" className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.Specializations")}</NavLink>
+        <NavLink  to="/specializations" className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.Specializations")}</NavLink>
       </li> 
       <li className='mx-4'>
-        <NavLink to="/contact" className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.Contact")}</NavLink>
+        <NavLink to="/contact" className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.Contact")}</NavLink>
       </li>
 
     </ul>
@@ -52,3 +54,10 @@ export default function Navbar() {
   
   </>
 }
+
+
+
+
+
+
+
