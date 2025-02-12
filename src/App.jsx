@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './pages/Home/Home'
 import "./app.css"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import ContactUs from './pages/ContactUs/ContactUs'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -15,7 +15,7 @@ import Doctors from './pages/Doctors/Doctors'
 import SpecializationPage from './pages/Specialization/SpecializationPage'
 import DoctorDetails from './pages/DoctorDetails/DoctorDetails'
 import NotFound from './pages/NotFound/NotFound'
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />, children: [

@@ -22,7 +22,7 @@ export default function HomeSlider() {
 
 <div className='bg-sec'>
 <div className="container">
-<div className="slider-container  custom-dots min-h-[80vh] md:h-[80vh]  ">
+<div className="slider-container  custom-dots min-h-[80vh] md:min-h-[80vh]  ">
             <div className='bg-sec '>
             <Slider {...settings}>
                         <Slide/>

@@ -25,6 +25,14 @@ export default function TopDoctors() {
                 },
             },
             {
+                breakpoint: 1448, 
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerPadding: "20px", 
+                },
+            },
+            {
                 breakpoint: 768, 
                 settings: {
                     slidesToShow: 1,
