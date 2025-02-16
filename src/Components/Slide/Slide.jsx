@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import doctorImg from '../../assets/images/Nicedoctors.png'
+import doctorImg from '../../assets/images/web.png'
 import { useTranslation } from 'react-i18next'
 import { TranslateContext } from '@/context/TranslateContext'
 export default function Slide() {
@@ -23,7 +23,7 @@ export default function Slide() {
                 </div>
 
 
-                <div className=' hidden md:block w-1/2 image'>
+                <div className='  md:block  image'>
                 
                 
                 <img className='w-full' src={doctorImg} alt="" />
