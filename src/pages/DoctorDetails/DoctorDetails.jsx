@@ -44,7 +44,7 @@ export default function DoctorDetails() {
                 </div>
             </div>
         </div> 
-        <div className='bg-white p-2 flex justify-around text-main text-xl font-semibold shadow-lg rounded-lg w-2/3 mx-auto '>
+        <div className='bg-white p-2 flex justify-around text-main text-xl font-semibold shadow-lg rounded-lg md:w-2/3 mx-auto '>
             <div className='text-sec'>
             Clinic appointments
             </div>
