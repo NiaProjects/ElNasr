@@ -5,12 +5,16 @@ import useApi from '@/Hooks/useApi'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AiFillMedicineBox } from 'react-icons/ai'
-import { FaHeartbeat, FaHospitalAlt, FaHospitalUser, FaLaptopMedical, FaRegHospital, FaStethoscope } from 'react-icons/fa'
+import { BiArchive } from 'react-icons/bi'
+import { FaAddressBook, FaHeartbeat, FaLaptopMedical, FaRegHospital, FaStethoscope } from 'react-icons/fa'
 import { FaUserDoctor } from 'react-icons/fa6'
-import { GiHospitalCross, GiMedicinePills, GiMedicines } from 'react-icons/gi'
-import { MdMedicalInformation, MdOutlineMedicationLiquid } from 'react-icons/md'
+import { FiGitPullRequest } from 'react-icons/fi'
+import { GiMedicinePills, GiMedicines } from 'react-icons/gi'
+import { MdBloodtype, MdMedicalInformation, MdOutlineMedicationLiquid } from 'react-icons/md'
 import { RiHospitalFill } from 'react-icons/ri'
-import { TbHeartRateMonitor, TbHospital, TbStethoscope } from 'react-icons/tb'
+import { TbHeartRateMonitor, TbStethoscope } from 'react-icons/tb'
+import { Link } from 'react-router-dom'
+
 export default function SpecializationPage() {
 
     const { isError , isLoading , data} = useApi( {url : urlSpecialists , queryKey : "specialists"} )
@@ -19,12 +23,15 @@ export default function SpecializationPage() {
     
     if(isLoading) return <CardSkeleton/>
     if(isError) return <p>Error</p>
-    const icons = [<FaHeartbeat/> , <FaRegHospital/> , <FaStethoscope/> , <RiHospitalFill />,<FaUserDoctor />
-      , <TbHeartRateMonitor/> , <GiMedicines /> , <AiFillMedicineBox /> , <GiMedicinePills />  , <TbStethoscope /> , <MdOutlineMedicationLiquid />,
-      <FaLaptopMedical /> , <MdMedicalInformation /> , <GiHospitalCross /> , <RiHospitalFill /> , <TbHospital /> , <FaHospitalAlt /> , <FaHospitalUser />
+  const icons = [<FaHeartbeat/> , <FaRegHospital/> , <FaStethoscope/> , <RiHospitalFill />,<FaUserDoctor />
+    , <TbHeartRateMonitor/> , <GiMedicines /> , <AiFillMedicineBox /> , <GiMedicinePills />  , <TbStethoscope /> , <MdOutlineMedicationLiquid />,
+    <FaLaptopMedical /> , <MdMedicalInformation /> , <BiArchive />, <MdBloodtype /> , <FaHeartbeat/> , <FaRegHospital/> , <FaStethoscope/> , <FaAddressBook />
+    , <MdBloodtype />
+    ,<AiFillMedicineBox /> , <GiMedicinePills /> , <FiGitPullRequest /> , <GiMedicines /> , <AiFillMedicineBox /> , <GiMedicinePills />
+  ]
+console.log(data.data.length);
+console.log(icons.length);
 
-    ]
-  
  
     
     
@@ -42,7 +49,6 @@ export default function SpecializationPage() {
   
       {data.data.map((data , index) =>  <Card key={data.id} data={data} icon={icons[index]} />)}
   </div>
-  <button className='bg-main text-white px-8 py-2 rounded-lg  mx-auto block mt-20 text-2xl'>{t("Specialization.button")}</button>
   </div>
   </section>
   </>

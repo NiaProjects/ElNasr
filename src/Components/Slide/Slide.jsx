@@ -13,7 +13,6 @@ export default function Slide() {
         <div className={`flex ${lang == "ar" ? "flex-row-reverse" : ""} `}>
 
                 <div className={` ${lang == "ar" ? "md:text-right" : "md:text-left"}  w-full md:w-1/2 text-center px-0 py-10  title flex  items-center justify-end  `}>
-                {/* test img */}
                             <div className='w-full'>
                             <p className='text-sec text-2xl uppercase'>{t("slider1.title")}</p>
                                         <h1 className='text-6xl font-bold mt-2 uppercase'>{t("slider1.description")}</h1>
@@ -23,10 +22,10 @@ export default function Slide() {
                 </div>
 
 
-                <div className='  md:block  image'>
+                <div className=' hidden md:block  image'>
                 
                 
-                <img className='w-full' src={doctorImg} alt="" />
+                <img className='w-full ' src={doctorImg} alt="" />
                 </div>
         </div>
 

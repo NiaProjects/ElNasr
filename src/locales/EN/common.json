@@ -53,6 +53,26 @@
       "Doctors" : "Doctors"
       
     },
+    "questions": {
+      "faq": [
+        {
+          "question": "What are the symptoms of a heart attack?",
+          "answer": "Symptoms include chest pain, shortness of breath, nausea, excessive sweating, and pain in the arm or jaw."
+        },
+        {
+          "question": "What is the difference between a virus and bacteria?",
+          "answer": "Viruses are smaller than bacteria and cannot be treated with antibiotics, whereas bacteria can be eliminated using antibiotics."
+        },
+        {
+          "question": "What is the best way to strengthen the immune system?",
+          "answer": "Eat a healthy diet, exercise, get enough sleep, and avoid smoking and stress."
+        },
+        {
+          "question": "Is drinking a lot of water good for health?",
+          "answer": "Yes, drinking water is essential for maintaining hydration and improving body functions."
+        }
+      ]
+    } ,
     "Doctors" : { 
       "title" : "doctors available in",
       "phone" : "phone"
@@ -68,7 +88,14 @@
       "massageValidation" : "massage is required min 3 chars",
       "namePlaceholder" : "Nagy Osama",
       "massagePlaceholder" : "Your Message"
-    }, "footer" : {
+    }, "Testimonial" : {
+"heading" : "Patients Testimonial", 
+"title" : "Let’s see what our happy patients says"
+    },
+    
+    
+    
+    "footer" : {
       "copyright" : "Copyright © 2025. All Rights Reserved by ",
       "address" : "El Nasr Building 511 Giza Square - Giza"
     }, "notFound" : {
@@ -76,5 +103,16 @@
       "title" : "page not found",
       "description" : "Sorry, the page you're looking for isn't available right now.",
       "button" : "Go Back"
+    }, "doctorDetails" : {
+
+      "About" : "About The Doctor" , 
+      "DoctorCV" :"Doctor CV",
+      "ClinicAppointments": "Clinic appointments",
+      "From" : "From",
+      "To" : "To",
+      "am" : "AM",
+      "pm" : "PM",
+      "Certificates" : "Certificates",
+      "Experience" : "Experience"
     }
 }

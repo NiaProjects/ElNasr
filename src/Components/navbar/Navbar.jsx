@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import logo from '../../assets/images/logoelnasr.png'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 import { TranslateContext } from '@/context/TranslateContext'
 import { useTranslation } from 'react-i18next'
 import UsFlag from '../Flags/UsFlag'
 import EgFlag from '../Flags/EgFlag'
+import { Link } from 'react-scroll'
 
 export default function Navbar() {
   const {lang , handelChangeLang} = useContext(TranslateContext)
@@ -37,7 +38,7 @@ export default function Navbar() {
         <NavLink to="/" className="block py-2 px-3    g-main    " aria-current="page">{t("navbar.Home")}</NavLink>
       </li>
       <li className='mx-4'>
-        <NavLink to="/about" className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.About")}</NavLink>
+        <Link to='about'  smooth  className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.About")}</Link>
       </li>
       <li className='mx-4'>
         <NavLink  to="/specializations" className="block py-2 px-3       dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{t("navbar.Specializations")}</NavLink>

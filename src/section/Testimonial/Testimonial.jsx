@@ -1,9 +1,12 @@
 import React from 'react'
 import Slider from 'react-slick'
 import Feedback from './Feedback';
+import { useTranslation } from 'react-i18next';
+import useApi from '@/Hooks/useApi';
+import CardSkeleton from '@/Components/skeletons/CardSkeleton';
 
 export default function Testimonial() {
-
+const {t} = useTranslation("global")
     const settings = {
         dots: true,
         infinite: true,
@@ -31,32 +34,32 @@ export default function Testimonial() {
         ],
     };
     
+
+    const {data , isLoading , isError } = useApi({url : `/feedback` , queryKey : "feedback"} )
+
+if(isLoading) return <CardSkeleton/>
+
+
   return <>
   
   <section>
 
 
     <div className="container py-12">
-        <h2 className='text-4xl font-bold my-4 text-sec text-center'> Patients Testimonial</h2>
-        <p className='text-gray-400 text-center'>Let’s see what our happy patients says</p>
+        <h2 className='text-4xl font-bold my-4 text-sec text-center'> {t("Testimonial.heading")}</h2>
+        <p className='text-gray-400 text-center'>{t("Testimonial.title")}</p>
 
 
 
 
         <div className="slider-container custom-dots">
-      <Slider {...settings}>
-        <div className=' p-4'>
-          <Feedback/>
-        </div>
-        <div className=' p-4'>
-          <Feedback/>
-        </div>
-        <div className=' p-4'>
-          <Feedback/>
-        </div>
-        <div className=' p-4'>
-          <Feedback/>
-        </div>
+      <Slider  className='' {...settings}>
+
+        {data.data.map((data)=>     <div key={data.id} className=' p-4'>
+          <Feedback data={data}/>
+        </div> )}
+    
+  
 
 
 

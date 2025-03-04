@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaArrowRight, FaFacebookF, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaArrowRight, FaFacebookF, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import logo from "../../assets/images/white logo 1.svg"
 import nia from "../../assets/images/nia_solution_Eg (1) 1.png"
 import foorerBg from "../../assets/images/footerbg.png"
@@ -21,25 +21,22 @@ export default function Footer() {
 
         <ul className='flex mt-4  gap-4'>
             <li className='p-2 rounded-full text-main bg-white'>
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=61572327965608" target="_blank">
                 <FaFacebookF />
                 </a>
             </li>
-            <li className='p-2 rounded-full text-main bg-white'>
-                <a href="#">
-                <FaTwitter  />
+            <li className='p-2 rounded-full text-rose-300 bg-white'>
+                <a href="https://www.instagram.com/alnasrmedical/" target="_blank">
+                <FaInstagram />
                 </a>
             </li>
-            <li className='p-2 rounded-full text-main bg-white'>
-                <a href="#">
+
+            <li className='p-2 rounded-full text-red-500 bg-white'>
+                <a href="https://www.youtube.com/channel/UCUF6JvN0CFutKv9WO6WkboA">
                 <FaYoutube  />
                 </a>
             </li>
-            <li className='p-2 rounded-full text-main bg-white'>
-                <a href="#">
-                <FaPinterest  />
-                </a>
-            </li>
+
         </ul>
     </div>
 

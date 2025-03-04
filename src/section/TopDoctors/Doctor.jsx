@@ -3,6 +3,7 @@ import React from 'react'
 import doctorImg from '../../assets/images/toppng 1.png'
 import { imageBase } from '@/api/api'
 import useExtractData from '@/Hooks/useExtractData'
+import { Link } from 'react-router-dom'
 export default function Doctor({data}) {
 
    const langData = useExtractData(data)
@@ -11,7 +12,9 @@ export default function Doctor({data}) {
   return <>
   
 
-  <div className='p-8'>
+<Link className='mb-10' to={`/doctor/${langData.id}`}>
+
+<div className='p-8 '>
 
 <div className='p-12 pb-0 overflow-hidden group rounded-t-full rounded-b-lg border-white border-8 bg-gradient-to-tl from-[#2AA7FF] to-[#E1F3FF]'>
 <img src={ imageBase + langData.img} className='h-80  group-hover:scale-110 duration-300 mx-auto' alt={langData.name} />
@@ -22,6 +25,8 @@ export default function Doctor({data}) {
 </div>
   </div>
   
+
+</Link>
   
   </>
 }

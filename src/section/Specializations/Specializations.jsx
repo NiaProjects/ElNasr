@@ -5,10 +5,11 @@ import useApi from '@/Hooks/useApi'
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AiFillMedicineBox } from 'react-icons/ai'
+import { BiArchive } from 'react-icons/bi'
 import { FaHeartbeat, FaLaptopMedical, FaRegHospital, FaStethoscope } from 'react-icons/fa'
 import { FaUserDoctor } from 'react-icons/fa6'
 import { GiMedicinePills, GiMedicines } from 'react-icons/gi'
-import { MdMedicalInformation, MdOutlineMedicationLiquid } from 'react-icons/md'
+import { MdBloodtype, MdMedicalInformation, MdOutlineMedicationLiquid } from 'react-icons/md'
 import { RiHospitalFill } from 'react-icons/ri'
 import { TbHeartRateMonitor, TbStethoscope } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
@@ -24,7 +25,7 @@ export default function Specializations() {
   if(isError) return <p>Error</p>
   const icons = [<FaHeartbeat/> , <FaRegHospital/> , <FaStethoscope/> , <RiHospitalFill />,<FaUserDoctor />
     , <TbHeartRateMonitor/> , <GiMedicines /> , <AiFillMedicineBox /> , <GiMedicinePills />  , <TbStethoscope /> , <MdOutlineMedicationLiquid />,
-    <FaLaptopMedical /> , <MdMedicalInformation />
+    <FaLaptopMedical /> , <MdMedicalInformation /> , <BiArchive />, <MdBloodtype /> , <FaHeartbeat/> , <FaRegHospital/> , <FaStethoscope/> , <RiHospitalFill />
   ]
 
   const copyOfData = JSON.parse ( JSON.stringify(   data.data  )  )

@@ -41,7 +41,7 @@ export default function OffersSlider() {
           <Slider {...settings}>
 
             {data?.data?.map((offer , index) => <div className=' p-
-            2 px-20' key={index}><Link to={`/doctor/${offer.id}`}>  <img className='w-full' src={ imageBase + offer.img} alt=""  /></Link></div>)}
+            2 px-20' key={index}><Link to={`/doctor/${offer.doc_id}`}>  <img className='w-full' src={ imageBase + offer.img} alt=""  /></Link></div>)}
           </Slider>
         </div>
 </section>
